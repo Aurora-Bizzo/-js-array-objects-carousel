@@ -37,8 +37,10 @@ for (let i = 0; i<videoGames.length; i++){
 
     cards_list.innerHTML += `
     <img class="cover" src="./img/${game.image}" width="100%"/>
-    <p>${game.title}</p>
-    <p>${game.description}</p>
+    <div class="text-container">
+        <p class="text"><strong>${game.title}</strong></p>
+        <p class="text">${game.description}</p>
+    </div>
     `
 }
 
@@ -62,7 +64,7 @@ const next = document.querySelector('.next');
 
 next.addEventListener('click', function(){
 
-    if (itemActive < imagesArray.length - 1) {
+    if (itemActive < videoGames.length - 1) {
 
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
