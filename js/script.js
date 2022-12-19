@@ -1,4 +1,4 @@
-//Creo array immagini
+//Creo array oggetti
 let videoGames = [
     {
         title:'Marvel\'s Spiderman Miles Morales',
@@ -36,18 +36,15 @@ for (let i = 0; i<videoGames.length; i++){
     console.log(`${game.title} - ${game.description} - ${game.image}`);
 
     cards_list.innerHTML += `
+    <div class="item">
     <img class="cover" src="./img/${game.image}" width="100%"/>
     <div class="text-container">
         <p class="text"><strong>${game.title}</strong></p>
         <p class="text">${game.description}</p>
     </div>
+    </div>
     `
 }
-
-
-
-
-
 
 const items = document.getElementsByClassName('item');
 let itemActive = 0;
@@ -106,7 +103,7 @@ prev.addEventListener('click', function(){
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
 
-        itemActive = imagesArray.length - 1;
+        itemActive = videoGames.length - 1;
 
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active')

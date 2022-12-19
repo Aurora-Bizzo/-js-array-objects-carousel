@@ -78,3 +78,22 @@
 .circle.active, .circle:hover{
     background-color: rgba(174, 174, 174, 1); 
 }
+
+
+.cover {
+    object-fit: cover;
+    position: absolute;
+}
+.text {
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+    font-size: 20px;
+    padding: 5px 20px;
+}
+.text-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
